@@ -39,8 +39,7 @@ This is not copied code; it is a **guided-engineering journey** under supervisio
 | 2 | **File → Save a copy in Drive** ثم شغّل الخلايا `C0 → C29` بالترتيب |
 | 3 | بوابات النجاح: `C9_DAY1_GATE` ✓ · `C20_DAY2_GATE` ✓ · `C29_EXPORT_SAFETY_CHECK` → `FINAL_EXPORT_CREATED` |
 
-📓 نسختي المنفذة كاملة: [`notebooks/Rafeeq_Mini_Capstone.ipynb`](notebooks/Rafeeq_Mini_Capstone.ipynb)
-
+📓 نسختي المنفذة كاملة: https://colab.research.google.com/drive/1BnbMk07VAVgsXx20JiND3zcKiUVnnQcj?usp=sharing
 ---
 
 ## 🧱 ماذا بنيت · What I Built
@@ -68,8 +67,7 @@ This is not copied code; it is a **guided-engineering journey** under supervisio
 | [`reports/submission_manifest.json`](reports/submission_manifest.json) | بيان التسليم مع بصمات التحقق |
 | [`LEARNING_PROGRESS.md`](LEARNING_PROGRESS.md) | سجل التقدم الآمن عبر نقاط Git ذات المعنى |
 
-🔍 التحقق الآلي: فحص Actions → Learner submission quality أخضر للـ Commit النهائي 
-(https://colab.research.google.com/drive/1BnbMk07VAVgsXx20JiND3zcKiUVnnQcj#scrollTo=5_0B2BX_AaiJ)
+
 
 ## 📚 التوثيق الفني المترابط · Linked Technical Documentation
 
