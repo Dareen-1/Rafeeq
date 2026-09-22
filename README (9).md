@@ -3,9 +3,8 @@
 [![Release candidate](https://img.shields.io/badge/release-0.9.0--rc3-0f766e)](CHANGELOG.md)
 [![Learner portal](https://img.shields.io/badge/learner_portal-live-31bad7)](https://almiyead-rgb.github.io/rafeeq-agentic-ai-labs/)
 [![Reference results](https://img.shields.io/badge/reference_results-compare-7c3aed)](https://almiyead-rgb.github.io/rafeeq-agentic-ai-labs/compare.html)
-[[![Colab Free](https://img.shields.io/badge/Colab-Free_CPU-f9ab00?logo=googlecolab&logoColor=white)](https://colab.research.google.com/github/almiyead-rgb/rafeeq-](https://colab.research.google.com/drive/1scCzfk3ReEw5A97pw07uYfiYIre7UN1G?usp=sharing)agentic-ai-labs/blob/v0.9.0-rc3/notebooks/Rafeeq_Mini_Capstone.ipynb)
-(https://colab.research.google.com/drive/1scCzfk3ReEw5A97pw07uYfiYIre7UN1G?usp=sharing)]
-(https://colab.research.google.com/drive/1scCzfk3ReEw5A97pw07uYfiYIre7UN1G?usp=sharing)[![No API key](https://img.shields.io/badge/API_key-not_required-2563eb)](.env.example)
+[![Colab Free](https://colab.research.google.com/drive/1scCzfk3ReEw5A97pw07uYfiYIre7UN1G?usp=sharing)]
+[![No API key](https://img.shields.io/badge/API_key-not_required-2563eb)](.env.example)
 
 **Rafeeq Mini** is one cumulative, bilingual **guided-engineering mini-capstone** for the three-day course **Advanced Agentic AI Systems Engineering**. Learners build a safe delivery-support agent in small stages, test every stage, and export an auditable GitHub submission. It is a supervised engineering simulation—not a production deployment or an open-ended software assignment.
 
