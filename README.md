@@ -1,95 +1,73 @@
-# Rafeeq Mini — من فضول مبتدئ إلى مهندسة أنظمة وكيلية آمنة
-## Bilingual Safe Agentic Delivery-Support Assistant · مساعد وكيلي ثنائي اللغة وآمن لدعم عمليات التوصيل
+# Rafeeq public synthetic data · بيانات رفيق الاصطناعية العامة
 
- **Course:** Advanced Agentic AI Systems Engineering · **Organization:** [SDAIA Academy](https://github.com/SDAIAAcademy)
+**Dataset release: `2026.09` · Fixture seed: `RAFEEQ-PUBLIC-2026-09-V1` · حالة الحزمة: جاهزة للمسار التدريبي العام**
 
----
-
-## ✨ القصة · The Story
-
-**اليوم 1 — النواة:** بدأت برسالة عميل بسيطة… وانتهيت بنظام يفهم العربية والإنجليزية، يتحقق من الهوية، ويوجّه المهام بذكاء.
-**Day 1 — The Core:** I started with a simple customer message… and ended with a system that understands Arabic and English, verifies identity, and routes tasks intelligently.
-
-**اليوم 2 — التنسيق:** علّمت النظام أن يتذكر داخل حدود، وأن يستشير السياسة، وأن يوقف أي استرداد فوق 500 ريال حتى يوافق إنسان.
-**Day 2 — Orchestration:** I taught the system to remember within bounds, consult policy, and pause any refund above SAR 500 for human approval.
-
-**اليوم 3 — الإثبات:** حاولت اختراقه بنفسي (حالات هجوم اصطناعية)، أصلحت الحواجز، وقست التحسينات، ثم سلّمت أدلة يمكن الدفاع عنها أمام أي مدقق.
-**Day 3 — The Proof:** I attacked it myself (synthetic attack cases), repaired the guardrails, measured one optimization, and shipped evidence any auditor can defend.
-
-هذا ليس كودًا منسوخًا؛ إنه **رحلة هندسة موجهة** تحت إشراف، خُتمت بتسليم قابل للتدقيق بالكامل.
-This is not copied code; it is a **guided-engineering journey** under supervision, sealed with a fully auditable submission.
-
----
-
-## 🎯 الفكرة · The Idea
-
-**Rafeeq Mini** مساعد عمليات وكيلي ثنائي اللغة لشركة توصيل افتراضية (**توصيل / Tawseel**). يفهم طلب العميل، يتحقق من ملكية الطلب عبر أدوات مقيّدة، يسترجع السياسة السارية فقط، يفوّض للوكيل المتخصص، ويسجل أثرًا منقّحًا — مع **موافقة بشرية إلزامية** لأي استرداد يتجاوز 500 ريال.
-
-**Rafeeq Mini** is a bilingual agentic operations assistant for a fictional delivery company. It understands the request, verifies order ownership through scoped tools, retrieves only the active policy, delegates to the right specialist, and records a redacted trace — with **mandatory human approval** for refunds above SAR 500.
-
-> ⚠️ All data is synthetic. No real customers, payments, or enterprise systems are involved. · جميع البيانات مصطنعة، ولا توجد معاملات مالية حقيقية.
-
----
-
-## 🚀 التشغيل · Run It
-
-| Step · الخطوة | Action · الإجراء |
+| English | العربية |
 |---|---|
-| 1 | افتح الدفتر الرسمي في **Google Colab** (CPU مجاني، بلا مفتاح API): [افتح دفتر رفيق الرسمي](https://colab.research.google.com/github/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/notebooks/Rafeeq_Mini_Capstone.ipynb) |
-| 2 | **File → Save a copy in Drive** ثم شغّل الخلايا `C0 → C29` بالترتيب |
-| 3 | بوابات النجاح: `C9_DAY1_GATE` ✓ · `C20_DAY2_GATE` ✓ · `C29_EXPORT_SAFETY_CHECK` → `FINAL_EXPORT_CREATED` |
+| This folder contains the small, deterministic dataset used by the three-day Rafeeq mini-capstone. Every person, customer, order, memory, message, and policy is fictional. | يحتوي هذا المجلد على حزمة البيانات الصغيرة والحتمية المستخدمة في مشروع «رفيق» المصغر خلال الأيام الثلاثة. جميع العملاء والطلبات والذكريات والرسائل والسياسات افتراضية بالكامل. |
+| The data is designed for Google Colab Free on CPU. It needs no download, API key, database, or paid service. | صُممت البيانات للعمل على Google Colab المجاني باستخدام المعالج فقط، ولا تحتاج إلى تنزيل خارجي أو مفتاح API أو قاعدة بيانات أو خدمة مدفوعة. |
+| Expected outcomes in the public development and evaluation files are learning oracles for self-checking. They are not hidden assessment answers. | النتائج المتوقعة في ملفات التطوير والتقييم العامة مرجع تعلم للتحقق الذاتي، وليست إجابات التقييم الخفي. |
 
-📓 نسختي المنفذة كاملة: https://colab.research.google.com/drive/1BnbMk07VAVgsXx20JiND3zcKiUVnnQcj?usp=sharing
----
+## Package contents · محتويات الحزمة
 
-## 🧱 ماذا بنيت · What I Built
+| File | Records | Training purpose · الغرض التدريبي |
+|---|---:|---|
+| `orders.csv` | 24 | Trusted local order facts for ownership, status, refund eligibility, amount gating, and duplicate prevention · حقائق طلبات محلية موثوقة لفحص الملكية والحالة والأهلية وحد المبلغ ومنع التكرار |
+| `policy_chunks.jsonl` | 6 | Active bilingual policy retrieval plus one obsolete version represented in Arabic and English · استرجاع السياسة السارية ثنائية اللغة مع نسخة قديمة ممثلة بالعربية والإنجليزية |
+| `memory_seed.jsonl` | 8 | Customer-scoped recall, expiry, inactive-memory filtering, and a cross-customer similarity trap · ذاكرة مقيدة بالعميل مع اختبار الانتهاء وعدم النشاط وتشابه عابر للعملاء |
+| `tickets_dev.jsonl` | 16 | Development cases for routing and deterministic outcome checks; 8 Arabic and 8 English · حالات تطوير للتوجيه وفحص النتائج الحتمية؛ 8 بالعربية و8 بالإنجليزية |
+| `eval_public.jsonl` | 8 | Public functional evaluation; 4 Arabic and 4 English · تقييم وظيفي عام؛ 4 بالعربية و4 بالإنجليزية |
+| `security_cases.jsonl` | 8 | Public adversarial fixtures; 4 Arabic and 4 English · حالات عدائية عامة؛ 4 بالعربية و4 بالإنجليزية |
 
-| Day · اليوم | Cells | Outcome · الناتج | Gate · البوابة |
-|---|---|---|---|
-| 1 · النواة والأدوات | C0–C9 | Typed state, bounded ReAct, MCP stdio, decision traces · حالة محددة، ReAct محدود، اتصال MCP، آثار قرار | `C9_DAY1_GATE` |
-| 2 · الذاكرة والتنسيق | C10–C20 | Scoped memory, policy retrieval, specialists, human-approval interrupt · ذاكرة معزولة، سياسات، وكلاء متخصصون، توقف للموافقة | `C20_DAY2_GATE` |
-| 3 · الأمن والإثبات | C21–C29 | Threat model, attack suite, guard retest, bounded reflection, optimization, safe export · نموذج تهديد، هجمات، إصلاح حواجز، مراجعة محدودة، تحسين، تصدير آمن | `C29_EXPORT_SAFETY_CHECK` |
+Field definitions, enums, and record-level constraints are documented in [`DATA_DICTIONARY.md`](DATA_DICTIONARY.md).
 
-**My synthetic attack case (TODO-11):** محاولة حقن أوامر لإقناع الوكيل بالموافقة على استرداد 900 ريال دون موافقة بشرية — وقد حُجبت كما هو متوقع: 
+تعريفات الحقول والقيم المسموحة والقيود موثقة في ملف [`DATA_DICTIONARY.md`](DATA_DICTIONARY.md).
 
----
+## Fixed lab rules · قواعد اللاب الثابتة
 
-## 📊 الأدلة · Evidence
+- Reference time for expiry checks: `2026-09-17T00:00:00Z`.
+- Refund eligibility is computed in code: the order belongs to the trusted runtime customer, `delay_days > 2`, and `already_refunded = false`.
+- Eligible amounts `<= 500.00` SAR may create one simulated refund request; amounts `> 500.00` SAR require documented human approval.
+- Ownership mismatch is blocked. A previous refund is rejected. The write tool is never automatically retried.
+- Memory is filtered by trusted `customer_id`, `active`, and `expires_at` before similarity ranking.
+- Policy is filtered by `locale`, `category`, `active`, and version before ranking.
 
-| Artifact · الملف | Content · المحتوى |
-|---|---|
-| [`reports/PROJECT_REPORT.md`](reports/PROJECT_REPORT.md) | تقرير المشروع الهندسي الكامل |
-| [`reports/SECURITY_ASSESSMENT.md`](reports/SECURITY_ASSESSMENT.md) | التقييم الأمني وإعادة اختبار الحواجز |
-| [`reports/trace.jsonl`](reports/trace.jsonl) | أثر تشغيل منقّح (لا يحتوي بيانات خاصة) |
-| [`reports/assessment_results.json`](reports/assessment_results.json) | نتائج التقييم الشامل — `run_id: [RUN_ID]` |
-| [`reports/monitoring_dashboard.png`](reports/monitoring_dashboard.png) | لوحة المراقبة البصرية |
-| [`reports/EVIDENCE_CARD.md`](reports/EVIDENCE_CARD.md) | بطاقة دليل مختصرة لكل يوم (3 بطاقات) |
-| [`reports/submission_manifest.json`](reports/submission_manifest.json) | بيان التسليم مع بصمات التحقق |
-| [`LEARNING_PROGRESS.md`](LEARNING_PROGRESS.md) | سجل التقدم الآمن عبر نقاط Git ذات المعنى |
+- الزمن المرجعي لفحص انتهاء الذاكرة هو `2026-09-17T00:00:00Z`.
+- تُحسب أهلية الاسترداد في الكود: ملكية الطلب للعميل الموثوق من بيئة التشغيل، و`delay_days > 2`، وعدم وجود استرداد سابق.
+- المبلغ المؤهل حتى `500.00` ريال يسمح بطلب استرداد محاكى واحد، وما زاد على ذلك يتطلب موافقة بشرية موثقة.
+- تُحجب محاولة الوصول إلى طلب عميل آخر، ويُرفض الطلب المسترد سابقًا، ولا تُعاد محاولة أداة الكتابة تلقائيًا.
+- تُرشح الذاكرة بحسب `customer_id` الموثوق و`active` و`expires_at` قبل ترتيب التشابه.
+- تُرشح السياسة بحسب `locale` و`category` و`active` والإصدار قبل ترتيب التشابه.
 
+## Minimal validation · التحقق السريع
 
+Run from the repository root in Colab or locally:
 
-## 📚 التوثيق الفني المترابط · Linked Technical Documentation
+```bash
+python - <<'PY'
+import csv, json
+from pathlib import Path
 
-- [دليل المتدرب الكامل (Learner Guide)](https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/docs/learner-guide.md) — المسار الكامل من الحساب إلى التسليم
-- [معيار التقييم من 100 درجة](https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/docs/ASSESSMENT_RUBRIC.md) · [متطلبات سدايا الإدارية](https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/docs/SDAIA_ADMIN_REQUIREMENTS.md)
-- [قوالب التقارير والأدلة](https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/reports/templates) · [دليل الاستعادة](https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs/blob/v0.9.0-rc3/recovery/README.md)
-- المستودع الرسمي للدورة: [almiyead-rgb/rafeeq-agentic-ai-labs](https://github.com/almiyead-rgb/rafeeq-agentic-ai-labs)
+root = Path("data/public")
+with (root / "orders.csv").open(encoding="utf-8", newline="") as fh:
+    assert len(list(csv.DictReader(fh))) == 24
 
----
+for name, expected in {
+    "policy_chunks.jsonl": 6,
+    "memory_seed.jsonl": 8,
+    "tickets_dev.jsonl": 16,
+    "eval_public.jsonl": 8,
+    "security_cases.jsonl": 8,
+}.items():
+    rows = [json.loads(line) for line in (root / name).read_text(encoding="utf-8").splitlines() if line.strip()]
+    assert len(rows) == expected, (name, len(rows))
 
-## 🛡️ حدود السلامة · Safety Boundary
+print("Public dataset validation: PASS")
+PY
+```
 
-- لا بيانات حقيقية، لا بيانات دخول، لا روابط خاصة في أي ملف عام.
-- الهوية والموافقة يضيفهما المضيف، ولا تقبلهما الأدوات من النموذج.
-- الآثار تسجل القرارات والعدادات فقط — لا أوامر خام ولا تفكير خاص.
+## Safety boundary · حدود السلامة
 
+Do not add real names, identity numbers, phone numbers, email addresses, physical addresses, precise locations, payments, support conversations, trainee records, access tokens, or production traces. Hidden evaluation and instructor-only security cases must remain outside every learner repository, branch, tag, release, and Git history.
 
----
-
-## 🏫 الإشادة · Acknowledgement
-
-- **البرنامج التدريبي:** دورة **هندسة أنظمة الذكاء الاصطناعي التوكيلي المتقدمة** — Advanced Agentic AI Systems Engineering
-- **الجهة:** [SDAIA Academy · أكاديمية سدايا](https://github.com/SDAIAAcademy)
-
-*Educational simulation · محاكاة تعليمية — reuse governed by `COURSE_USE_PERMISSION.md`.*
+يُمنع إضافة أسماء أو أرقام هوية أو هواتف أو بريد إلكتروني أو عناوين أو مواقع دقيقة أو مدفوعات أو محادثات دعم أو سجلات متدربين أو رموز وصول أو آثار تشغيل حقيقية. تبقى حالات التقييم الخفي واختبارات المدرب الأمنية خارج مستودعات المتدربين وفروعها ووسومها وإصداراتها وسجل Git بالكامل.
